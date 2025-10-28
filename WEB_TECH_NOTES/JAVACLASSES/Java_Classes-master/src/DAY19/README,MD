@@ -1,0 +1,47 @@
+Inbuilt Libraries :- 
+
+
+Object class :- Object is a superMost class for all the class in java 
+present in java.lang package hence it is automatically imported by javac.
+
+Object class contains 11 non static methods or 1 no argument constructor.
+
+
+1. java.lang.Object.toString() :- String 
+2. java.lang,Object.toEquals() :- comparison
+3. java.lang.Object.hashCode() :- 
+
+
+
+1. java.lang.Object.toString() :- String 
+   It is one of the non static methods inherited into any class that 
+returns the address in the string format when try to print 
+references variable of any object.
+
+2. java.lang,Object.Equals() - boolean :- comparison
+ Equals methods of Object class compare the references of any two objects
+we can override the equals method of Object class.
+
+ == -> It will check  value or Object.
+ equals ->it will only values/ state
+ 
+ 
+ ===================================================
+ 
+ 
+ 3. java.lang.Object.hashCode() :- 
+  hasCode method returns unique integer value for each and every object addresses.
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
