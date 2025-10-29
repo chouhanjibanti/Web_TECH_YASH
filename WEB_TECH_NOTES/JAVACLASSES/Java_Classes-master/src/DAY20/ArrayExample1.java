@@ -29,7 +29,5 @@ public class ArrayExample1 {
 			System.out.print(d1+" ");
 		}
 		System.out.print("]");
-		
-		
 	}
 }
