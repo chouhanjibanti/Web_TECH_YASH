@@ -40,11 +40,14 @@ Questions based on Array :-
 3. WAP to create an array of integer and display the element which are prime.
 4. WAP to create an array of integer and display the maximum and minimum element from an array.
 5. Distinct element find and display in another array.where array is [5,6,5,7,6,3] -> [5,6,7,3]
-6. WAP to find a new array with distinct odd element.
-7. WAP to find a new array with distinct even element.
-8. WAP to find the occurrences of each and every elements of a given array.
+6. WAP to find a new array with distinct odd element.[5,6,5,7,6,3] -> [5,7,3] 
+7. WAP to find a new array with distinct even element.[6]
+8. WAP to find the occurrences of each and every elements of a given array.[5,6,5,7,6,3]
 9. WAP to sort an array using the bubble sort. [4,1,6,3,2]
 
+
+[5,6,5,7,6,3]
+[5,6,5,7,6,3]
 
 
 
