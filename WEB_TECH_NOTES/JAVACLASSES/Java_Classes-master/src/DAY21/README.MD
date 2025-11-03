@@ -48,6 +48,24 @@ always result in new object and the address/references of new object is returned
 9. java.lang.String.subString()
 
 
+================================
+
+Questions of String:- 
+
+
+1. WAP to check the number of alphabet , special character and digits present in the String .
+2. WAP to reverse the given String.  
+3. WAP to check weather given String is palindrome or not .
+4. WAP to find the sum of the digits present in a given String.where String is Debu56g23sha1la.
+5. WAP to find the number of occurrence of each and every character in the given String where String is debugshalabugla.
+6. WAP to program to remove the duplicate character from the String.
+7. I/P  -> "java html css"
+   Output -> 
+    (I) -> "ssc lmth avaj"
+    (II) -> "css html java"
+    (III) -> "avaj lmth ssc"
+
+
 
 
 

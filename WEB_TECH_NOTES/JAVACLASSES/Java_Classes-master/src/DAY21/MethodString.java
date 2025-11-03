@@ -34,19 +34,25 @@ public class MethodString {
 		
 		// if char is not exist -> -1
 		
-		String s100 = "vedant zaheer nandini khusi";
-		System.out.println(s100.indexOf('y'));
-		System.out.println(s100.indexOf('e'));
-		System.out.println(s100.indexOf('e', 2));
-		System.out.println(s100.indexOf("zaheer"));
-		System.out.println(s100.indexOf("zaheer",0));
+//		String s100 = "vedant zaheer nandini khusi";
+//		System.out.println(s100.indexOf('y'));
+//		System.out.println(s100.indexOf('e'));
+//		System.out.println(s100.indexOf('e', 2));
+//		System.out.println(s100.indexOf("zaheer"));
+//		System.out.println(s100.indexOf("zaheer",0));
+//		
+//		
+//		String s101 = "welcome to debugshala";
+//		String[] arg = s101.split("e");
+//		for(String s1:arg) {
+//			System.out.println(s1);
+//		}
 		
 		
-		String s101 = "welcome to debugshala";
-		String[] arg = s101.split("e");
-		for(String s1:arg) {
-			System.out.println(s1);
-		}
+		// subString method
+		String s1 = "my name is debugshala";
+		System.out.println(s1.substring(6));
+		System.out.println(s1.substring(3,7));
 
 		
 	}
