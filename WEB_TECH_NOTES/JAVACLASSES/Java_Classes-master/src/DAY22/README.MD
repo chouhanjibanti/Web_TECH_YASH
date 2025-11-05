@@ -61,6 +61,53 @@ Types of Exception:-
 1. declare the exception :- throws
 2. try catch :- handle
 
+
+(I). Declaring the exception :- we can declare the exception using throws keyword in method declaration or constructor
+declaration .If we declare the exception we can avoid only compiler time error but during the runtime we may expect aburst stop in the program execution due to exception.
+
+(II) Handing the Exception :- We can handle the problematic statements of checked Exception by using the try catch block and by which we can avoid compile time error and even the exception during the run time. 
+
+
+==================================
+
+throw keyword :- 
+
+1. throw is a keyword use to rise an exception.
+
+Example :-
+public class ExampleThrow {
+
+	public static void main(String[] args) {
+		
+		System.out.println("1");
+		
+		throw new NullPointerException();
+	}
+}
+
+=======================================================
+
+Custom and UserDefined Exception :- 
+
+-> Exception classes created by the developer according to the requirement 
+by extending any of the Throwable type classes are known as custom exception.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  throws use
