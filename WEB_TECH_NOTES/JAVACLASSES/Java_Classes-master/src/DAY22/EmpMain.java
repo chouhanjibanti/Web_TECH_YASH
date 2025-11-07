@@ -10,7 +10,7 @@ public class EmpMain {
 //            e1.display();
 //
 //        } catch (SalaryIncorrectException e) {
-//            System.out.println("Exception Caught: " + e.getMessage());
+//            Syst	em.out.println("Exception Caught: " + e.getMessage());
 //        }
 
         System.out.println("----------------------------");
