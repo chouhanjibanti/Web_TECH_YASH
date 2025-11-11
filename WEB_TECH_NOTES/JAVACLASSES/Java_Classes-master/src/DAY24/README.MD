@@ -54,6 +54,16 @@ Collection :- non pri
 
 
 
+==============================================
+
+Questions :- create one ArrayList Store the element 
+[java,C#,javascript,python, 10,Golang]
+
+Output :- [java,C#,c,php,python,Golang]
+
+
+
+
 
 
 
