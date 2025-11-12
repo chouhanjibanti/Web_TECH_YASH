@@ -61,6 +61,30 @@ Questions :- create one ArrayList Store the element
 
 Output :- [java,C#,c,php,python,Golang]
 
+====================================
+
+
+A functional interface is an interface that has only abstract method.
+
+Comparable interface :- sort : present in java.lang package
+
+Methods :- compareTo()
+
+
+====================================
+
+Comparable Interface Questions :- 
+
+
+Create the Student class in this take the 
+attributes like id , name , students
+
+using the compareTo()
+Based on name 
+and based on the marks 
+
+
+
 
 
 
