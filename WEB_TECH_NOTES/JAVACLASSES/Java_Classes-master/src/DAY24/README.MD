@@ -83,7 +83,16 @@ using the compareTo()
 Based on name 
 and based on the marks 
 
+===================================
 
+
+Functional interface :-
+one abstract method
+
+
+interface Demo{
+  public void run();
+}
 
 
 
