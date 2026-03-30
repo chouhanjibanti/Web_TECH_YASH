@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            padding: 12px;
+            transition: background-color 0.5s ease;
+        }
+        /* Screen only */
+          @media screen {
+              body::before{
+                 content: "This is visible on screen";
+                 display: block;
+                 font-weight: bold;
+              }
+          }
+
+          /* 2 print only */
+        @media print{
+             body{
+                background-color: white;
+                color: orange;
+             }
+             body::before{
+                content: "Print version";
+                display: block;
+                font-weight: bold;
+             }
+         }
+
+         /* @media (min-width: 400px){
+            body{
+                background-color: greenyellow;
+            }
+         }
+
+           @media (max-width: 300px){
+            body{
+                border: 5px dashed green;
+            }
+         } */
+
+
+       @media (min-width:300px) and (max-width:400px){
+    body{
+        background-color: red;
+    }
+}
+        
+
+         /* Orientation landscape */
+         /* @media (orientation:landscape){
+             body{
+                background-color: purple;
+             }
+         } */
+
+          /* Orientation portrait */
+         /* @media (orientation:portrait){
+             body{
+                background-color: chartreuse;
+             }
+         } */
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Reponsive media query</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos sed
+      doloremque neque cum velit maiores!
+    </p>
+  </body>
+</html>
