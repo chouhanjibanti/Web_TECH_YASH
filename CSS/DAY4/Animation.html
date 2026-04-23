@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .container{
+            background-color: blueviolet;
+        }
+        .box{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            position: relative;
+
+
+            animation-name: indore;
+            animation-duration: 4s;
+
+            /* animation-name: debugshala;
+            animation-duration: 1s; */
+
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: ease-in-out; */
+
+
+                /* animation-iteration-count: 3; */
+                /* animation-iteration-count: infinite; */
+
+                /* animation-direction: alternate;
+                animation-direction: reverse;
+                animation-direction: alternate-reverse; */
+
+                /* animation-delay: 5s; */
+
+                /* animation-fill-mode: forwards; */
+
+                /* animation: debugshala 3s ease 2s 5 alternate forwards; */
+
+
+        }
+        @keyframes debugshala{
+            from{
+               width: 200px;
+            }
+            to{
+              width: 1000px;
+            }
+        }
+        @keyframes indore{
+            0%{
+               left: 0px;
+               top: 0px;
+            }
+            25%{
+                left: 0px;
+                top: 200px;
+            }
+            50%{
+               left: 200px;
+               top: 200px;
+            }
+            75%{
+                background-color: greenyellow;
+                top: 0px;
+                left: 200px;
+            }100%{
+               left: 0px;
+               top: 0px;
+            }
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

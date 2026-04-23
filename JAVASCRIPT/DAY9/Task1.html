@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Name : <input type="text" placeholder="Enter name" id="name"> <br>
+       Email : <input type="email" placeholder="enter email" id="email"> <br>
+       Password : <input type="password" placeholder="Enter password" id="pass""> <br>
+    Address : <input type="text" placeholder="Enter Address" id="add""> <br>
+
+       <button id="btn">Submit</button> <br>
+
+       Emailget :- <input type="email" id="email1"> <br>
+       <button id="btn1">GetData</button>
+       <p id="result"></p>
+    </form>
+
+    <script>
+             const btn = document.getElementById("btn");
+
+             btn.onclick = function(e){ 
+                      const email =document.getElementById("email").value 
+                      const password = document.getElementById("pass").value
+                      const addresss = document.getElementById("add").value
+                      const name = document.getElementById("name").value
+
+                      const userData = {
+                         name:name,
+                         password:password,
+                         addresss:addresss
+                      }
+
+
+
+                    localStorage.setItem(email,JSON.stringify(userData));
+                    alert("data saved to localstorage")
+             }
+
+                   // get logic
+                //     const btn1 = document.getElementById("btn1");
+
+                //    btn1.onclick = function(e){
+                //         e.preventDefault();
+                //       const email1 =  document.getElementById("email1").value
+
+                //       const userData = localStorage.getItem(email1)
+                //       if(userData!=null ){
+                //              document.getElementById("result").textContent = userData;
+                //       }else{
+                //          document.getElementById("result").textContent = "data not found"
+                //       }
+                //    } 
+
+    </script>
+</body>
+</html>
