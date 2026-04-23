@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <button id="otp">Otp</button>
+    <button id="color">ColorGenerate</button>
+
+
+    <h1 id="h1">Debugshala</h1>
+    <button id="attach">Attach</button>
+
+    <button id="omv">onMouseOver</button>
+
+
+    <input type="text" id="input1">
+
+
+    <button id="addEvent">addEventListner</button>
+
+    <script>
+        // Example of onclick
+      //  const btn= document.getElementById("btn");
+      //  btn.onclick = function(){
+      //     document.writeln("hy i am onclick event");
+      //  }
+
+      //  // Example of otp generator 
+      //  const otp = document.getElementById("otp")
+      //  otp.onclick = function(){
+      //    const num = Math.floor(Math.random()*10000)
+      //    alert(`Your otp is ${num}`)
+      //  }
+
+
+      //  // color generate logic 
+      //  const color = document.getElementById("color")
+      //  color.onclick = function(){
+      //     const num = Math.floor(Math.random()*10000)
+      //     document.body.style.backgroundColor = `#${num}`
+      //  }
+
+      //  const attach = document.getElementById("attach")
+      // const h1 =  document.getElementById("h1")
+      //  attach.onclick = function(){
+      //     const num = Math.floor(Math.random()*10000)
+      //     h1.style.backgroundColor = `#${num}`
+      //  }
+
+
+      // const omv =  document.getElementById("omv")
+      // omv.onmouseup = function(){
+      //   alert("hy i am onMouseOver")
+      // }
+
+
+   //   const input1 = document.getElementById("input1")
+   //   input1.onkeypress = function(e){
+   //      console.log(e.key);
+   //      const keyname=e.keyCode;
+   //      alert(`hy i am ${keyname} key `)
+   //   }
+
+        document.getElementById("addEvent").addEventListener("click", ()=>{
+           
+         console.log(`hy i am addEvent Listener`)
+        },false)
+    </script>
+</body>
+</html>
