@@ -7,15 +7,15 @@ Async and Await :-  ES6
 Synchronous
 
 line - by - line 
-1 
-2
-3
+1 - complete 
+2 - wait complete 
+3 - 
 4
 5
 
 Asynchronous 
 parellel / no wait 
-1
+1 
 2
 3
 4
@@ -36,9 +36,10 @@ settimeOut(()=>{
 
 
 ==================================
+
 Promises :-  ES6 
 
-Promises is a javascript object. It helps to we can handle the asynchronous operation
+Promises is a javascript object. It helps to we can handle the asynchronous operation.
 and it will represent the task either it will resolve/sucess/fullfill or reject/failed in the future.It helps to write readble code.
 
 Promises Syntax :- 
@@ -56,6 +57,29 @@ Methods :-
 .then   -> when task is resolve
 .catch  -> when task is rejected
 
+
+
+
+
+Promises Syntax :- 
+
+new Promise((resolve,reject)=>{
+
+})
+
+
+Mainly stages of the promises :-
+1. PENDING
+2. RESOLVE  -> .then
+3. REJECT   -> .catch
+
+
+Methods of the promises :- 
+1. .then()
+2. .catch()
+
+
+==============================================
 
 ==========================================
 
@@ -101,3 +125,23 @@ setInterval :- we can perform the task after period of time.
 setInterval(()=>{
   
 })
+
+
+=================================
+
+
+Async and Await :- 
+
+Async -> keyword -> function with
+await -> async and await both work to gether
+
+Async function Demo(){
+  // await statement
+  // await statement
+}
+
+=============================================
+
+setTimeout and setInterval :- 
+
+setTimeout :- delay the task , like set the time period after time periord 
