@@ -31,18 +31,18 @@
 
 // Nested Object :-  
 // shallow copy
-// let obj1 = {
-//     name :"yash",
-//     age:23,
-//     address:{
-//         city :"indore"
-//     }
-// }
-// const obj2 = {...obj1};
+let obj1 = {
+    name :"yash",
+    age:23,
+    address:{
+        city :"indore"
+    }
+}
+const obj2 = {...obj1};
 
-// obj2.address.city = "bhopal"
+obj2.address.city = "bhopal"
 
-// console.log(obj1.address.city);
+console.log(obj1.address.city);
 // ----------------------------------------
 
 // Deep copy 

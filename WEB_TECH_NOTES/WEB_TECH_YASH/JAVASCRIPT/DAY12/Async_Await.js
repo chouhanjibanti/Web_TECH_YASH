@@ -1,6 +1,6 @@
 async function fetchPosts(){
     try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const response = await fetch("https://jslder.typicode.com/posts");
       const data = await response.json();
       console.log("Fetching post data",data);
     } catch (error) {
@@ -10,7 +10,7 @@ async function fetchPosts(){
 
 async function fetchUsers(){
     try {
-      const response = await fetch("https://jsonpla.typicode.com/users");
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
       const data = await response.json();
       console.log("Fetching Users data",data);
     } catch (error) {
