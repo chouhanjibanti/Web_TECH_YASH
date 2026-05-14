@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "Windsurf - AI Comment Assistant",
+  "version": "1.0.0",
+  "description": "Generate intelligent comments for social media platforms using AI",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "https://*.reddit.com/*",
+    "https://*.linkedin.com/*",
+    "https://*.twitter.com/*",
+    "https://*.x.com/*",
+    "https://*.youtube.com/*",
+    "https://*.dev.to/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.reddit.com/*",
+        "https://*.linkedin.com/*",
+        "https://*.twitter.com/*",
+        "https://*.x.com/*",
+        "https://*.youtube.com/*",
+        "https://*.dev.to/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Windsurf AI Comment Assistant",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": [
+        "https://*.reddit.com/*",
+        "https://*.linkedin.com/*",
+        "https://*.twitter.com/*",
+        "https://*.x.com/*",
+        "https://*.youtube.com/*",
+        "https://*.dev.to/*"
+      ]
+    }
+  ]
+}

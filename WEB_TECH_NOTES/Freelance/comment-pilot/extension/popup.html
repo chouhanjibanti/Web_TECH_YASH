@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windsurf - AI Comment Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 350px;
+            min-height: 400px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .logo h1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .platform-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .platform-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .reddit { background: #ff4500; }
+        .linkedin { background: #0077b5; }
+        .twitter { background: #1da1f2; }
+        .youtube { background: #ff0000; }
+        .devto { background: #000000; }
+        .unknown { background: #6b7280; }
+
+        .platform-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-full {
+            grid-column: 1 / -1;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+
+        .recent-activity {
+            max-height: 120px;
+            overflow-y: auto;
+        }
+
+        .activity-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #f3f4f6;
+            font-size: 12px;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-platform {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .activity-time {
+            color: #9ca3af;
+            font-size: 11px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer {
+            padding: 16px;
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span style="font-size: 24px;">🤖</span>
+            <h1>Windsurf</h1>
+        </div>
+        <div class="status">
+            <div class="status-dot"></div>
+            <span id="status-text">Ready</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="error-container"></div>
+        
+        <div class="card">
+            <div class="card-title">Current Platform</div>
+            <div class="platform-info">
+                <div id="platform-icon" class="platform-icon unknown">?</div>
+                <div id="platform-name" class="platform-name">Detecting...</div>
+            </div>
+            <div class="quick-actions">
+                <button id="generate-btn" class="btn btn-primary">Generate Comment</button>
+                <button id="scrape-btn" class="btn btn-secondary">Deeper Analysis</button>
+                <button id="dashboard-btn" class="btn btn-secondary btn-full">Open Dashboard</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Your Statistics</div>
+            <div id="stats-container">
+                <div class="loading">Loading stats...</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Recent Activity</div>
+            <div id="activity-container">
+                <div class="loading">Loading activity...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="#" id="settings-link">Settings</a> • 
+        <a href="#" id="help-link">Help</a> • 
+        <a href="#" id="feedback-link">Feedback</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
