@@ -1,9 +1,8 @@
 import React from 'react'
 import { BUY_BOOK, SALE_BOOK } from './BookTypes'
 
-
 const initialState = {
-    NumberOfBook :200,
+    NumberOfBook :200,//199
 }
 
 const BookReducer = (state=initialState ,action) => {

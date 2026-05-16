@@ -82,3 +82,9 @@ Debughshala DataBase :-
   2. Reducer :- shopkeeper (decides weather to reduce and add books)
   3. Store :- shop -> manage -> if book kharidi -> reduce and if book bechi-> add book
   4. Component :- UI -> 5 books here  -> 4 
+
+
+
+
+useSelector :- access the data from the Store.
+useDisptch :- action provider
