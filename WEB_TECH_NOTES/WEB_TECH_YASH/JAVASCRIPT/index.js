@@ -126,30 +126,83 @@
 // ===================================
 
 // Longest non-repeating substring
-let input = "abcabccbb";
+// let input = "abcabccbb";
 
-function longestString(str) {
-    let set = new Set();
-    let left = 0;
-    let result = "";
+// function longestString(str) {
+//     let set = new Set();
+//     let left = 0;
+//     let result = "";
 
-    for (let right = 0; right < str.length; right++) {
+//     for (let right = 0; right < str.length; right++) {
 
-        while (set.has(str[right])) {
-            set.delete(str[left]);
-            left++;
-        }
+//         while (set.has(str[right])) {
+//             set.delete(str[left]);
+//             left++;
+//         }
 
-        set.add(str[right]);
+//         set.add(str[right]);
 
-        if (right - left + 1 > result.length) {
-            result = str.substring(left, right + 1);
-        }
-    }
+//         if (right - left + 1 > result.length) {
+//             result = str.substring(left, right + 1);
+//         }
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-console.log(longestString(input)); // abc
+// console.log(longestString(input)); // abc
 
+
+
+
+// =======================================================
+
+// var , let and const
+
+// var :- functional Scope : we can access only inside the function.
+// function Scope :- inside any of the function 
+// Block -> {}
+
+
+// Error , 10 , 10 
+// function Demo(){
+//     if(true){
+//         var a = 10;
+//         console.log(a);// 10 
+//     }
+//     console.log(a);//10 
+// }
+// Demo()
+// console.log(a);
+
+
+// let and const :- 
+
+// let and const :- block 
+// if(true){
+//     let b = 20;
+//     console.log(b);// 20 
+// }
+// console.log(b);// reference b is not defined
+
+
+// // const 
+
+// function Demo1(){
+//     if(true){
+//         const c =20;
+//         console.log(c);//20
+//     }
+//     console.log(c);// refr
+// }
+// Demo1()
+// console.log(c);//refere
+
+
+
+// Tailwind css with reactjs 
+
+// String reverse :-  "yash" -> "hsay"
+// Array Reverse :- loop [1,2,3,4,5,6]
+// 
 
