@@ -1,7 +1,6 @@
 const express = require('express')
 const fs = require('fs')
 
-
 // app initilize 
 const app = express();
 

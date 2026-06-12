@@ -46,7 +46,7 @@ app.use(express.urlencoded({extended:true})); -> html form -> js object
 
 ===================================================
 
-5. Easy to create APU :- 
+5. Easy to create APIs :- 
 GET      / get 
 POST      / save data 
 PUT       / update the data 

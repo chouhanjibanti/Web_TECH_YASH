@@ -9,7 +9,7 @@ Types of Middleware
 Application-Level Middleware :- Entire application logic
 Router-Level Middleware :- Specific Route logic 
 Built-in Middleware -> express.json , express.urlencoded , express.static 
-Error-Handling Middleware -> Error handing logic 
+Error-+ Middleware -> Error handing logic 
 Third-Party Middleware -> cors 
 
 
@@ -24,3 +24,11 @@ app.use((req,res,next)=>{
 
 })
 next is responsible for the call the next middleware.
+
+
+==================================================
+
+Postman :- Tool for the api testing.
+
+if you are backend developer and you created some Apis 
+and want to test this apis that time you can use this:- 

@@ -1,2 +1,5 @@
 1781004377334: / : GET
 1781004405678: /about?myName=yash : GET
+1781088289352: / : GET
+
+1781088289931: /favicon.ico : GET
