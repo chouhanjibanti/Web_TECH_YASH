@@ -12,7 +12,7 @@ app.use(express.json())
 
 // mannual middleware 
 app.use((req,res,next)=>{
-     fs.appendFile("./log.txt",`\n${Date.now()}:${req.url}:${req.method}'n`,(err)=>{
+     fs.appendFile("./log.txt",`\n${Date.now()}:${req.url}:${req.method}\n`,(err)=>{
         next();
      })
 })
@@ -40,13 +40,38 @@ app.post("/api/users",(req,res)=>{
 })
 
 // get the based on id 
-app.get("/api/users/:id",(req,res)=>{
-   const id = Number(req.params.id);
+// app.get("/api/users/:id",(req,res)=>{
+//    const id = Number(req.params.id);
+//    const user = users.find((user)=>{
+//        return user.id === id;
+//    })
+//    return res.json(user);
+// })
+
+// // update 
+// app.put("/api/users/:id",(req,res)=>{
+//     res.json({sucess:"Data updated Sucessfully"})
+// })
+
+// // Delete 
+// app.delete("/api/users/:id",(req,res)=>{
+//     res.json({sucess:"Data Deleted Sucessfully"})
+// })
+
+
+// if path is same that time we can use the route 
+app.route("/api/users/:id").get((req,res)=>{
+     const id = Number(req.params.id);
    const user = users.find((user)=>{
        return user.id === id;
    })
    return res.json(user);
+}).put((req,res)=>{
+     res.json({sucess:"Data updated Sucessfully"})
+}).delete((req,res)=>{
+    res.json({sucess:"Data Deleted Sucessfully"})
 })
+
 
 
 app.listen(PORT,()=> console.log(`http://localhost:${PORT}`))
