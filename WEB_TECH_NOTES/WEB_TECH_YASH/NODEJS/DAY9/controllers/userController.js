@@ -13,8 +13,10 @@ exports.createUser = async (req,res)=>{
 
 // show all users 
 exports.getUsers = async (req,res) =>{
-    const users=await User.find();
+    const users = await User.find();
     res.render("users",{users})
 }
+
+// http://localhost:8000/users/all
 
 

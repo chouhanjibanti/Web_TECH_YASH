@@ -30,4 +30,4 @@ app.use("/users",  require("./routes/userRoutes"))
 
 app.listen(PORT,()=> console.log(`http://localhost:${PORT}`))
 
-// http://localhost:8000/users/
+// http://localhost:8000/users/all

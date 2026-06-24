@@ -43,3 +43,16 @@ Tags :-
 <% %> -> scriptlet tag -> js code -> if else , for loop 
 <%# %> -> comment tag 
 <%= %> -> output display on the browser
+
+
+-====================================
+
+
+MVC :- 
+M -> database logic -> schema , model 
+V -> UI -> ejs -> embded javscript 
+C -> Controller 
+
+node index.js -> npm start
+
+index.js -> 1st 
