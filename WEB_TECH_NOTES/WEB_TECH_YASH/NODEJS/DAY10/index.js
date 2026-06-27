@@ -1,5 +1,5 @@
 const express = require('express')
-const dotenv=require('dotenv')
+const dotenv=require('dotenv')// 
 const nodemailer =require('nodemailer')
 
 dotenv.config();
@@ -15,11 +15,11 @@ app.use(express.json());// json -> js object -> req.body
 app.post("/send-email", async (req,res)=>{
 try {
     
-    // 1 desctructuring from the request
+    // 1 destructuring from the request
     const {to,subject,text} = req.body;
 
-    // 2. create a transport object (responsible for coneecting to the mail server)
-    const transporter = nodemailer.createTransport({
+    // 2. create a transport object (responsible for conecting to the mail server)
+    const transporter = nodemailer.createTransport({ 
         service:"gmail", // you can use gmail , outlook , yahoo
         auth:{
             user : process.env.EMAIL_USER,// your email address from .env file  
@@ -43,8 +43,7 @@ try {
 } catch (error) {
      console.log("Error sending email + ", error);
       res.status(500).json({message:"Failed to send email ",error})
-}
-      
+}   
 });
 
 app.get("/",(req,res)=>{
