@@ -27,6 +27,7 @@ app.use((req,res,next)=>{
       }else{
         console.log("Error in Appending",err);
       }
+      next();
     })
 })
 
