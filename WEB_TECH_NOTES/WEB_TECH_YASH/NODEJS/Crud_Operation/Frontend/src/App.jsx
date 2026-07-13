@@ -7,7 +7,6 @@ function App() {
 
   const[users,setUsers]=useState([]);
 
-
   const fetchUser = async () =>{
      const res =  await getUsers();
      setUsers(res.data.data)

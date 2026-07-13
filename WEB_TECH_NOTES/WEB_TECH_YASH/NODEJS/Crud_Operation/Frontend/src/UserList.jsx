@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { deleteUser, updateUser } from './api/userApi';
 
 function UserList({users,refresh}) {
   const[editId,setEditId]=  useState(null);
@@ -9,6 +10,30 @@ function UserList({users,refresh}) {
          address:"",
          phone:""
     })
+
+        const handleEdit = (user) =>{
+        setEditId(user._id);
+        setFormData({
+            name:user.name,
+            email:user.email,
+            password:user.password,
+            address:user.address,
+            phone:user.phone
+        })
+    }
+
+    const handleChange = (e) =>{
+         setFormData({...formData, [e.target.name]: e.target.value})
+    }
+
+    const handleUpdate = async () =>{
+        await updateUser(editId,{
+            ...formData
+        })
+        setEditId(null);
+        refresh();
+    }
+
 
   return (
    <>
@@ -26,7 +51,7 @@ function UserList({users,refresh}) {
       <tbody>
         {users.map((user)=>(
             <tr key={user._id}>
-                {editId === user.id ? (
+                {editId === user._id ? (
                     <>
                     <td>
                         <input type="text" name="name" value={formData.name} onChange={handleChange} />
@@ -70,3 +95,11 @@ function UserList({users,refresh}) {
 }
 
 export default UserList
+
+
+
+
+// name  :- yash   -> ajay
+// password- yash@123 -> ajay@123
+// address :- indore
+// Phone  :90990909
